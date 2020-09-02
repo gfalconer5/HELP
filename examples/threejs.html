@@ -75,7 +75,7 @@
 
       //
 
-      new THREE.GLTFLoader().load( 'res/three/head.glb', function ( gltf ) {
+      new THREE.GLTFLoader().load( 'res/three/s1.glb', function ( gltf ) {
 
         let instanceColors = [];
 
@@ -90,7 +90,7 @@
         geometry.computeVertexNormals();
         geometry.scale( 0.5, 0.5, 0.5 );
 
-        new THREE.TextureLoader().load( 'res/three/matcap.jpg', function ( texture ) {
+        new THREE.TextureLoader().load( 'res/three/s1.png', function ( texture ) {
 
           texture.encoding = THREE.sRGBEncoding;
           let material = new THREE.MeshMatcapMaterial( { color: 0xaaaaff, matcap: texture } );
