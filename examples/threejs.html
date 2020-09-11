@@ -92,25 +92,12 @@
         geometry.computeVertexNormals();
         geometry.scale( 0.1, 0.1, 0.1 );
 
-        new THREE.TextureLoader().load( 'res/three/matcap.jpg', function ( texture ) {
+        new THREE.TextureLoader().load( 'res/three/sg.png', function ( texture ) {
 
           texture.encoding = THREE.sRGBEncoding;
-          let material = new THREE.MeshMatcapMaterial( { color: 0xaaaaff, matcap: texture } );
+          let material = new THREE.MeshBasicMaterial( { color: 0xaaaaff, map: texture } );
 
           material.onBeforeCompile = function ( shader ) {
-
-            shader.vertexShader = shader.vertexShader
-              .replace( 'void main() {', [
-                  'attribute vec3 instanceColor;',
-                  'varying vec3 vInstanceColor;',
-                  'void main() {',
-                  'vInstanceColor = instanceColor;'
-                ].join( '\n' ) );
-
-            shader.fragmentShader = shader.fragmentShader
-              .replace( '#include <common>', 'varying vec3 vInstanceColor;' )
-              .replace( 'vec4 diffuseColor = vec4( diffuse, opacity );',
-                'vec4 diffuseColor = vec4( diffuse * vInstanceColor, opacity );' );
 
           };
 
@@ -119,7 +106,7 @@
           if ( mesh ) {
 
             let i = 0;
-            let xoffset = 5;
+            let xoffset = 10;
             let yoffset = 4;
 
             for ( let x = 0; x < xCount; x ++ ) {
