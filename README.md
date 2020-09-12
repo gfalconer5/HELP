@@ -4,9 +4,8 @@ Parallax effect in javascript using face tracking, can be a good improvement for
 nothing loads. This library uses TFJS with WASM backend on CPU, so your GPU will be free.
 
 ### Live examples
-* [deepview](https://munrocket.github.io/parallax-effect/examples/deepview.html)
-* [pixi.js](https://munrocket.github.io/parallax-effect/examples/pixi.html)
-* [three.js](https://munrocket.github.io/parallax-effect/examples/threejs.html)
+
+* [three.js](/examples/threejs.html)
 
 ![](https://habrastorage.org/webt/rj/65/g9/rj65g9_jtm2rgljgmk6yu5sjf6k.jpeg)
 
