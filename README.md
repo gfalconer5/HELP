@@ -5,7 +5,7 @@ nothing loads. This library uses TFJS with WASM backend on CPU, so your GPU will
 
 ### Live examples
 
-* [three.js](/examples/threejs.html)
+* [three.js](https://github.com/gfalconer5/HELP/blob/master/examples/threejs.html)
 
 ![](https://habrastorage.org/webt/rj/65/g9/rj65g9_jtm2rgljgmk6yu5sjf6k.jpeg)
 
